@@ -1,0 +1,152 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.weather-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Max width for desktop */
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* Search Box Styling */
+.search-box {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+#city-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px 0 0 8px;
+    font-size: 16px;
+}
+
+#search-btn {
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#search-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Data Container Styling */
+.data-container {
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+}
+
+#city-name {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.main-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.temp {
+    font-size: 60px;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-right: 15px;
+}
+
+#weather-icon {
+    width: 80px;
+    height: 80px;
+}
+
+.description {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+}
+
+/* Details Section (Humidity/Wind) */
+.details {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+}
+
+.detail-box {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.label {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.value {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Responsive Design (Media Query) */
+@media (max-width: 480px) {
+    .weather-card {
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .main-info {
+        flex-direction: column;
+    }
+
+    .temp {
+        font-size: 50px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .details {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
